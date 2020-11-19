@@ -11,7 +11,7 @@ project back using optimized martix
 
 ## Usage
 
-```shell
+```text
 usage: get_optimal_cam_mtx.py [-h] [-a ALPHA] [--out_img OUT_IMG] [--out_yml OUT_YML] calib_mtx dist_img
 
 Find optimal camera calibration matrix
