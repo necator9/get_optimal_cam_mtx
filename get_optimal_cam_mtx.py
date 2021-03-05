@@ -42,4 +42,10 @@ if args.out_yml:
         yaml.dump(calibration, fw)
 
 cv2.imshow('Undistorted image', dst)
-cv2.waitKey(5000)
+
+wait_time = 1000
+while cv2.getWindowProperty('Undistorted image', cv2.WND_PROP_VISIBLE) >= 1:
+    keyCode = cv2.waitKey(wait_time)
+    if (keyCode & 0xFF) == ord("q"):
+        cv2.destroyAllWindows()
+        break
